@@ -1,0 +1,2 @@
+let numeroChupitos = parseInt(prompt("Introduzca el número de chupitos que has tomado"));
+numeroChupitos>0 ? alert("Te has pasado del límite, no puedes conducir") : alert("Nos alegra que seas un conductor responsable");
