@@ -84,5 +84,5 @@ while (!finJuego) {
 
   moverVibora(vibora, nuevaX, nuevaY);
 
-  finJuego = verificarFinJuego();
+  finJuego = verificarFinJuego(); 
 }

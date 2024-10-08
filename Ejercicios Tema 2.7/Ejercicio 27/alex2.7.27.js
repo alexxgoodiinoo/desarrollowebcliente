@@ -31,4 +31,4 @@ do{
         acertado = true;
         alert("¡Felicidades! Has adivinado la palabra: " + palabraAdivinar);
     }
-}while(!acertado && intentos>0);
+}while(!acertado && intentos>0); 
