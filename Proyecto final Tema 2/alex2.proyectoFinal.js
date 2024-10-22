@@ -134,49 +134,34 @@ class Tienda {
 
 }
 
-let tienda = new Tienda();
+const tienda = new Tienda();
 
-let producto1 = new Producto("Manzana", 1.2, 0);
-let producto2 = new Producto("Pera", 1.5, 0);
-let producto3 = new Producto("Plátano", 0.9, 30);
+const producto1 = new Producto("Manzana", 1.2, 50);
+const producto2 = new Producto("Pera", 1.5, 20);
+const producto3 = new Producto("Plátano", 0.9, 0);
+const producto4 = new Producto("Uva", 2.5, 100);
+const producto5 = new Producto("Naranja", 1.0, 10);
 
 tienda.agregarProducto(producto1);
 tienda.agregarProducto(producto2);
 tienda.agregarProducto(producto3);
+tienda.agregarProducto(producto4);
+tienda.agregarProducto(producto5);
 
-console.log("Inventario inicial:");
+console.log("\nRegistro de Ventas:");
+tienda.realizarVenta("Juan", 1, 10);
+tienda.realizarVenta("Maria", 2, 5); 
+tienda.realizarVenta("Luis", 4, 20); 
+tienda.realizarVenta("Ana", 5, 10); 
+
 tienda.mostrarInventario();
 
-console.log("\nActualizando stock del producto con ID 1");
-tienda.actualizarStock(1, 25);
-
-console.log("\nInventario después de actualizar el stock:");
-tienda.mostrarInventario();
-
-console.log("\nRealizando una venta:");
-tienda.realizarVenta("Juan", 1, 5); 
-
-console.log("\nInventario después de la venta:");
-tienda.mostrarInventario();
-
-console.log("\nVentas realizadas:");
-tienda.mostrarVentas();
-
-console.log("\nIntentando realizar una venta con stock insuficiente:");
-tienda.realizarVenta("María", 2, 50);
-
-console.log("\nRealizando otra venta:");
-tienda.realizarVenta("Luis", 3, 10); 
-
-console.log("\nVentas acumuladas:");
 tienda.mostrarVentas();
 
 console.log("\nProductos sin stock:");
-let productosSinStock = tienda.productosSinStock();
+const productosSinStock = tienda.productosSinStock();
 productosSinStock.forEach(producto => console.log(producto.mostrarInfo()));
 
-console.log("\nVentas de Juan:");
 tienda.ventasPorCliente("Juan");
 
-console.log("\nTotal de ingresos:");
 tienda.calcularTotalIngresos();
